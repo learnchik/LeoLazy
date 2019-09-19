@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>LeoLazy loading image</title>
+</head>
+
+<body>
+  <div class="parent">
+    <picture>
+      <source srcset="img/pic.webp" type="image/webp">
+      <img class="lazy img-fluid"
+        src="data:image/gif;base64,R0lGODlhBwAFAIAAAP///wAAACH5BAEAAAEALAAAAAAHAAUAAAIFjI+puwUAOw=="
+        data-src="img/pic.jpg" alt="Image">
+    </picture>
+  </div>
+
+
+  <script src="libs/lazy/lazy.min.js"></script>
+
+  <script>
+    var lazyLoadInstance = new LazyLoad({
+      elements_selector: ".lazy"
+      // ... more custom settings?
+    });
+  </script>
+</body>
+
+</html>
